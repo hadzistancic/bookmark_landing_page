@@ -1,0 +1,31 @@
+/**
+ * Buttons
+ */
+
+//==============================================================================
+// Buttons
+//==============================================================================
+
+.btn {
+	border: 2px solid;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 250ms ease-in;
+}
+
+.btn--primary {
+	background-color: $soft-blue;
+	border-color: $soft-blue;
+	&:hover {
+		background-color: $grayish-blue;
+	}
+}
+
+.btn--secondery {
+	background-color: $grayish-blue;
+	border-color: $grayish-blue;
+	color: $grayish-blue;
+	&:hover {
+		border-color: $very-dark-blue;
+	}
+}
