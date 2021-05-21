@@ -1,0 +1,31 @@
+.section--features {
+	position: relative;
+	margin-bottom: 80px;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 47vw;
+		width: 80%;
+		background-color: $soft-blue;
+		bottom: 30%;
+		left: 0;
+		z-index: -1;
+		border-top-right-radius: 120px;
+		border-bottom-right-radius: 120px;
+		max-height: 380px;
+		@include mq(360px) {
+			bottom: 27%;
+		}
+		@include mq(450px) {
+			bottom: 24%;
+		}
+		@include mq(690px) {
+			bottom: 20%;
+		}
+	}
+
+	&__btn {
+		margin-top: 30px;
+	}
+}
