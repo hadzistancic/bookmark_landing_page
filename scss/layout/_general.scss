@@ -10,17 +10,25 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: "Rubik", sans-serif;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: 400;
+	color: $grayish-blue;
 }
 
-p,
 h1,
 h2,
 h3,
 h4 {
 	padding: 0;
 	margin: 0;
+	color: $very-dark-blue;
 	font-weight: 500;
+}
+
+p {
+	line-height: 1.7;
+	padding: 0;
+	margin: 0;
 }
 
 h1 {
@@ -50,8 +58,16 @@ img {
 	max-width: 100%;
 }
 
+header {
+	padding: 30px 0;
+}
+
 .main-container {
 	max-width: 1120px;
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
+}
+
+.section {
+	text-align: center;
 }
