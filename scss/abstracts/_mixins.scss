@@ -1,0 +1,21 @@
+/**
+ * Mixins
+ */
+
+//==============================================================================
+// Media Query
+//==============================================================================
+
+@mixin mq($size, $direction: min) {
+	@if $direction == min {
+		@media screen and (min-width: $size) {
+			@content;
+		}
+	} @else if $direction == max {
+		@media screen and (max-width: $size) {
+			@content;
+		}
+	} @else {
+		@error "mq mixin only accepts min and max keywords";
+	}
+}
