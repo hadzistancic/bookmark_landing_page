@@ -15,17 +15,28 @@
 		font-weight: 500;
 		letter-spacing: 2.5px;
 		margin-bottom: 15px;
+		@include mq($breakpoint) {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__title {
 		color: rgba(#fff, 0.9);
 		line-height: 1.3;
 		margin-bottom: 15px;
+		@include mq($breakpoint) {
+			font-size: 32px;
+			margin-bottom: 30px;
+		}
 	}
 
-	&__input-wrapper {
+	&__form {
 		display: flex;
 		flex-direction: column;
+		@include mq($breakpoint) {
+			flex-direction: row;
+			padding: 0 20px;
+		}
 	}
 
 	&__input {
@@ -35,5 +46,10 @@
 		font-family: inherit;
 		outline: none;
 		margin-bottom: 15px;
+		@include mq($breakpoint) {
+			margin-bottom: 0;
+			flex: 1;
+			margin-right: 15px;
+		}
 	}
 }

@@ -5,6 +5,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include mq($breakpoint) {
+			flex-direction: row;
+		}
 	}
 
 	&__logo {
@@ -12,10 +15,19 @@
 			fill: #fff;
 		}
 		margin-bottom: 20px;
+		@include mq($breakpoint) {
+			margin-bottom: 0;
+			display: flex;
+			margin-right: 50px;
+		}
 	}
 
 	&__list {
 		margin-bottom: 20px;
+		@include mq($breakpoint) {
+			margin-bottom: 0;
+			display: flex;
+		}
 	}
 
 	&__item {
@@ -23,9 +35,31 @@
 			color: rgba(#fff, 0.8);
 			text-transform: uppercase;
 			letter-spacing: 1.5px;
+			@include mq($breakpoint) {
+				font-size: 13px;
+				&:hover {
+					color: $soft-red;
+				}
+			}
 		}
 		margin-bottom: 15px;
 		text-align: center;
+		@include mq($breakpoint) {
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+	}
+
+	&__social {
+		margin-left: auto;
+	}
+
+	&__social-icon {
+		@include mq($breakpoint) {
+			&:hover * {
+				fill: $soft-red;
+			}
+		}
 	}
 
 	&__social-icon:first-child {
