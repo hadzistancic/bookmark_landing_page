@@ -1,0 +1,39 @@
+.section--contact {
+	color: rgba(#fff, 0.9);
+	margin-top: 80px;
+	padding: 50px 20px;
+	background-color: $soft-blue;
+
+	&__wrapper {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	&__smallprint {
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: 2.5px;
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		color: rgba(#fff, 0.9);
+		line-height: 1.3;
+		margin-bottom: 15px;
+	}
+
+	&__input-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		padding: 13px 15px;
+		border: none;
+		border-radius: 6px;
+		font-family: inherit;
+		outline: none;
+		margin-bottom: 15px;
+	}
+}
