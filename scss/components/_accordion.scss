@@ -1,5 +1,11 @@
 .accordion {
-	margin: 50px 0 40px;
+	margin: 50px auto 40px;
+	max-width: 600px;
+
+	&__item {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
 	&__btn {
 		display: flex;
 		font-family: inherit;
@@ -10,18 +16,36 @@
 		border: none;
 		background-color: transparent;
 		padding: 20px 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		font-size: inherit;
 		text-align: left;
+		cursor: pointer;
+		@include mq($breakpoint) {
+			&:hover {
+				color: $soft-red;
+			}
+		}
+
+		&.active {
+			.accordion__arrow {
+				transform: rotate(180deg);
+			}
+		}
 	}
 
 	&__body {
 		max-height: 0;
 		overflow: hidden;
+		transition: max-height 300ms ease-out;
+	}
+
+	&__content {
+		padding: 20px 0;
+		text-align: left;
 	}
 
 	&__arrow {
 		margin-left: 15px;
 		margin-right: 3px;
+		transition: transform 300ms ease-out;
 	}
 }

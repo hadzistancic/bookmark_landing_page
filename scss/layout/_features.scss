@@ -1,6 +1,9 @@
 .section--features {
 	position: relative;
 	margin-bottom: 80px;
+	@include mq($breakpoint) {
+		margin-bottom: 170px;
+	}
 	&::before {
 		content: "";
 		display: block;
