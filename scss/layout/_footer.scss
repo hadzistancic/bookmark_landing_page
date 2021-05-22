@@ -51,7 +51,9 @@
 	}
 
 	&__social {
-		margin-left: auto;
+		@include mq($breakpoint) {
+			margin-left: auto;
+		}
 	}
 
 	&__social-icon {

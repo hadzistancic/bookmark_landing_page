@@ -24,7 +24,7 @@
 		text-align: center;
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 300ms ease-out, visibility 0s ease-out 300ms;
+		transition: opacity 400ms ease-out, visibility 0s ease-out 400ms;
 		@include mq($breakpoint) {
 			flex-direction: row;
 			align-items: center;
@@ -128,7 +128,7 @@
 		.nav__list {
 			opacity: 0.93;
 			visibility: visible;
-			transition: opacity 300ms ease-out;
+			transition: opacity 400ms ease-out;
 		}
 
 		.nav__logo {
