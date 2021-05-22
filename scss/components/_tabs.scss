@@ -12,6 +12,7 @@
 		color: $grayish-blue;
 		padding: 20px 0;
 		font-weight: 500;
+		cursor: pointer;
 		&::after {
 			content: "";
 			display: block;
@@ -22,6 +23,9 @@
 			transform: translateX(-50%);
 			height: 4px;
 			background-color: #fff;
+			@include mq($breakpoint) {
+				width: 100%;
+			}
 		}
 		&.active {
 			color: $very-dark-blue;
@@ -33,9 +37,45 @@
 
 	&__navigation {
 		margin-bottom: 30px;
+		@include mq($breakpoint) {
+			display: flex;
+			max-width: 800px;
+			margin: 0 auto 70px;
+		}
+	}
+
+	&__content-wrapper {
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 
 	&__img-wrapper {
 		margin-bottom: 90px;
+		@include mq($breakpoint) {
+			display: flex;
+			justify-content: flex-end;
+			width: 50%;
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		@include mq($breakpoint) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	&__text-wrapper {
+		@include mq($breakpoint) {
+			text-align: left;
+			margin-left: 120px;
+		}
+		@include mq(1150px) {
+			margin-top: 60px;
+		}
 	}
 }

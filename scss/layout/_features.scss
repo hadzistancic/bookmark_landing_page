@@ -23,6 +23,11 @@
 		@include mq(690px) {
 			bottom: 20%;
 		}
+		@include mq($breakpoint) {
+			width: 40%;
+			bottom: unset;
+			top: 383px;
+		}
 	}
 
 	&__btn {
