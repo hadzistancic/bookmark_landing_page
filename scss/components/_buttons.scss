@@ -47,3 +47,28 @@
 	color: #fff;
 	border-radius: 6px;
 }
+
+.btn-scroll-to-top {
+	position: fixed;
+	right: 10px;
+	bottom: 26px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: $soft-red;
+	border: none;
+	transform: translateY(220%);
+	transition: transform 300ms ease-in-out;
+	cursor: pointer;
+	@include mq($breakpoint) {
+		right: 60px;
+		bottom: 60px;
+	}
+	&__arrow {
+		fill: #fff;
+	}
+
+	&.active {
+		transform: translateY(0);
+	}
+}
