@@ -1,6 +1,10 @@
 .section--hero {
 	position: relative;
 	margin: 30px 0 80px;
+	overflow: hidden;
+	@include mq($breakpoint) {
+		margin: 100px 0;
+	}
 	&::before {
 		content: "";
 		display: block;
@@ -17,15 +21,26 @@
 		@include mq(330px, max) {
 			top: 10%;
 		}
+		@include mq($breakpoint) {
+			width: 40%;
+			top: 19%;
+		}
 	}
 	&__img-wrapper {
 		margin-bottom: 30px;
+		@include mq($breakpoint) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__title {
 		font-size: 32px;
 		line-height: 1.3;
 		margin-bottom: 20px;
+		@include mq($breakpoint) {
+			font-size: 44px;
+			line-height: 1.1;
+		}
 	}
 
 	&__btn-wrapper {
@@ -36,6 +51,9 @@
 			display: inline-flex;
 			flex-direction: column;
 		}
+		@include mq($breakpoint) {
+			justify-content: flex-start;
+		}
 	}
 
 	&__btn:first-child {
@@ -43,6 +61,21 @@
 		@include mq(348px, max) {
 			margin-right: 0;
 			margin-bottom: 15px;
+		}
+	}
+
+	&__grid {
+		@include mq($breakpoint) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__content {
+		@include mq($breakpoint) {
+			order: -1;
+			flex: 1 0 400px;
+			text-align: left;
 		}
 	}
 }
