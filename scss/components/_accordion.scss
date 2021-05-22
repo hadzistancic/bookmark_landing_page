@@ -1,0 +1,27 @@
+.accordion {
+	margin: 50px 0 40px;
+	&__btn {
+		display: flex;
+		font-family: inherit;
+		justify-content: space-between;
+		align-items: center;
+		color: $very-dark-blue;
+		width: 100%;
+		border: none;
+		background-color: transparent;
+		padding: 20px 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		font-size: inherit;
+		text-align: left;
+	}
+
+	&__body {
+		max-height: 0;
+		overflow: hidden;
+	}
+
+	&__arrow {
+		margin-left: 15px;
+		margin-right: 3px;
+	}
+}

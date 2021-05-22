@@ -32,7 +32,7 @@
 		display: flex;
 		justify-content: center;
 		margin: 30px 0;
-		@include mq(330px, max) {
+		@include mq(348px, max) {
 			display: inline-flex;
 			flex-direction: column;
 		}
@@ -40,7 +40,7 @@
 
 	&__btn:first-child {
 		margin-right: 15px;
-		@include mq(330px, max) {
+		@include mq(348px, max) {
 			margin-right: 0;
 			margin-bottom: 15px;
 		}
